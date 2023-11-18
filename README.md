@@ -2871,8 +2871,23 @@ pipeline {
     }
 }
 ```
+####################################################### slact token dan sonra uygula
+
+    post {
+        success {
+            script {
+                slackSend channel: '#class-chat', message: 'microservices weekly pipeline was created -ersin sari-', teamDomain: 'devops14tr', tokenCredentialId: 'jenkins-slack'
+            }       
+        }
+
+###########################################################
+
+
+
 
 - Commit the change, then push the script to the remote repo.
+
+
 
 ```bash
 git add .
